@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH CASE</title>
+</head>
+<body>
+    <p><br/>
+        1. addition <br/><br/>
+        2. subraction <br/><br/>
+        3. division<br/><br/>
+        4. multiplication<br/><br/>
+        5. modulus<br/><br/><br/>
+        
+        <input type="number1" id="number1" name="number1" placeholder="enter number1"><br/>
+        <input type="number2" id="number2" name="number2" placeholder="enter number2"><br/>
+        enter your choice <br/>
+        <input type="number" id="choice" name="choice" placeholder="enter your choice"><br/>
+        <button type="button" onclick="calculations()">Submit</button>
+
+
+    </p>
+</body>
+<script>
+    const calculations = () =>{
+        let value = parseInt(document.getElementById("choice").value);
+        let num1 = parseInt(document.getElementById("number1").value);
+        let num2 = parseInt(document.getElementById("number2").value);
+        let result;
+        switch (value) {
+            case 1:
+                result = num1 + num2 ;
+                document.write("result is ", result);
+                break;
+            case 2:
+                result = num1 - num2 ;
+                document.write("result is ", result);
+                break;
+            case 3:
+                result = num1 / num2 ;
+                document.write("result is ", result);
+                break;  
+            case 4:
+                result = num1 % num2 ;
+                document.write("result is ", result);
+                break;      
+            default:
+                document.write("enter correct option");
+                break;
+        }
+    }
+</script>
+</html>

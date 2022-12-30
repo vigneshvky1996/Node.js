@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+</head>
+
+<style>
+    body{
+        color: black;
+        font-size: larger;
+    }
+</style>
+<body>
+    <input type="number" id="number" name="number" placeholder="enter number of rows"><br/>
+    <button type="button" onclick = "printStar()">Submit</button>
+    <span class="text-success" id="ans"></span>
+</body>
+
+<script>
+    const printStar = () => {
+        let number = document.getElementById("number").value;
+        number = parseInt(number);
+        let str1 = "";
+        let count = 0;
+        let innerCount = 0;
+        while(count <= number){
+            while(innerCount < count){
+                str1 = str1 + "*";
+                innerCount = innerCount +1;
+             }
+            str1 = str1 + "<br/>";
+            count = count + 1;
+            innerCount = 0;
+        }
+        document.getElementById('ans').innerHTML = str1;
+    }
+</script>
+</html>
